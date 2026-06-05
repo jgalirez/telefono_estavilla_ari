@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAE — Teléfono</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+.wrap{display:flex;align-items:flex-start;justify-content:center;padding:2rem 1rem 3rem;background:#111318;min-height:500px;}
+.phone{width:390px;min-height:844px;background:#080810;border-radius:50px;border:2px solid #1e1e30;overflow:hidden;position:relative;box-shadow:0 0 0 1px #0a0a14,inset 0 1px 0 rgba(255,255,255,0.07);}
+.notch{width:120px;height:34px;background:#080810;border-radius:0 0 22px 22px;margin:0 auto;position:relative;z-index:20;}
+.status-bar{display:flex;justify-content:space-between;align-items:center;padding:0 28px 8px;font-size:12px;font-weight:500;color:#8880aa;margin-top:-34px;position:relative;z-index:19;font-family:'DM Sans',sans-serif;}
+.status-icons{display:flex;gap:6px;align-items:center;}
+.status-icons i{font-size:14px;}
+.home-bg{min-height:780px;background:radial-gradient(ellipse at 30% 10%,rgba(100,60,200,0.18) 0%,transparent 55%),radial-gradient(ellipse at 80% 60%,rgba(30,80,160,0.12) 0%,transparent 50%),#080810;padding:10px 22px 32px;}
+.home-time{font-size:62px;font-weight:300;color:#f0ebff;letter-spacing:-3px;line-height:1;margin-bottom:2px;font-family:'DM Sans',sans-serif;}
+.home-date{font-size:13px;color:#6655aa;font-style:italic;margin-bottom:22px;font-family:'DM Sans',sans-serif;}
+.home-widget{background:rgba(255,255,255,0.055);border:0.5px solid rgba(255,255,255,0.09);border-radius:22px;padding:13px 15px;margin-bottom:10px;cursor:pointer;transition:background .2s;}
+.home-widget:hover{background:rgba(255,255,255,0.09);}
+.hw-label{font-size:10px;color:#6655aa;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px;font-weight:500;font-family:'DM Sans',sans-serif;}
+.hw-val{font-size:14px;color:#d8d0f0;font-family:'DM Sans',sans-serif;}
+.hw-val b{color:#a78bfa;font-weight:500;}
+.apps-label{font-size:10px;color:#443366;text-transform:uppercase;letter-spacing:2px;margin:16px 0 12px;font-weight:500;font-family:'DM Sans',sans-serif;}
+.apps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px;}
+.app-icon{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;transition:transform .15s;}
+.app-icon:hover{transform:scale(1.08);}
+.app-icon:active{transform:scale(0.94);}
+.app-bubble{width:58px;height:58px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;position:relative;flex-shrink:0;}
+.app-bubble i{font-size:26px;}
+.app-name{font-size:10px;color:#b0a8cc;text-align:center;line-height:1.2;font-family:'DM Sans',sans-serif;}
+.app-badge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:9px;font-weight:700;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #080810;font-family:'DM Sans',sans-serif;}
+.dock{display:flex;justify-content:space-around;padding:13px 18px;background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.07);border-radius:30px;}
+.app-link{text-decoration:none;color:inherit;}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+</head>
+<body>
+<div class="wrap">
+<div class="phone">
+  <div class="notch"></div>
+  <div class="status-bar">
+    <span id="clock">21:47</span>
+    <div class="status-icons">
+      <i class="ti ti-wifi"></i>
+      <i class="ti ti-battery-3"></i>
+    </div>
+  </div>
+  <div class="home-bg">
+    <div class="home-time" id="home-time">21:47</div>
+    <div class="home-date"></div>
+    <div class="home-date"></div>
+    <div class="home-widget">
+      <div class="hw-label">RAE</div>
+      <div class="hw-val">Sesión 1 - Bienvenidos a la Real Academia de Estavilla</div>
+    </div>
+    <div class="home-date"></div>
+    <div class="apps-label">Apps</div>
+    <div class="apps-grid">
+
+
+      <a href="https://app.notion.com/p/Portal-RAE-012239b8450d838484dd014e3df0dda8" target="_top" class="app-link">
+          <div class="app-icon">
+            <div class="app-bubble">
+              <img src="assets/portal.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+            </div>
+            <span class="app-name">Portal RAE</span>
+          </div>
+      </a>
+
+      <a href="https://app.notion.com/p/Instavilla-1cf239b8450d82d0885401794c038b2f" target="_top" class="app-link">
+          <div class="app-icon">
+            <div class="app-bubble">
+              <img src="assets/instavilla.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+            </div>
+            <span class="app-name">Instavilla</span>
+          </div>
+      </a>
+
+      <a href="https://app.notion.com/p/Foro-RAE-a6c239b8450d8268b57d81e89d8af336" target="_top" class="app-link">
+          <div class="app-icon">
+            <div class="app-bubble">
+              <img src="assets/foro.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+            </div>
+            <span class="app-name">Foro RAE</span>
+          </div>
+      </a>
+
+      <a href="https://app.notion.com/p/Contactos-e71239b8450d82c3a68581b90f4f09a3" target="_top" class="app-link">
+          <div class="app-icon">
+            <div class="app-bubble">
+              <img src="assets/contactos.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+            </div>
+            <span class="app-name">Contactos</span>
+          </div>
+      </a>
+
+      <a href="https://app.notion.com/p/Estav-a-a34239b8450d83d6870c01a9bcc7bfd8" target="_top" class="app-link">
+          <div class="app-icon">
+            <div class="app-bubble">
+              <img src="assets/mapa.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+            </div>
+            <span class="app-name">Estavia</span>
+          </div>
+      </a>
+
+      <a href="https://app.notion.com/p/El-Archivo-4a0239b8450d827e977201cd1d841d93" target="_top" class="app-link">
+          <div class="app-icon">
+            <div class="app-bubble">
+              <img src="assets/archivo.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+            </div>
+            <span class="app-name">El Archivo</span>
+          </div>
+      </a>
+
+      <a href="https://app.notion.com/p/Diario-a2d239b8450d8317a7b281a6c4c5330b" target="_top" class="app-link">
+          <div class="app-icon">
+            <div class="app-bubble">
+              <img src="assets/diario.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+            </div>
+            <span class="app-name">Diario</span>
+          </div>
+      </a>
+
+      <a href="https://app.notion.com/p/Galer-a-7e3239b8450d828993e581f78c391596" target="_top" class="app-link">
+        <div class="app-icon">
+          <div class="app-bubble">
+            <img src="assets/galeria.png" alt="Mapa" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">
+          </div>
+          <span class="app-name">Galeria</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+</div>
+<script>
+function tick(){const n=new Date(),h=String(n.getHours()).padStart(2,'0'),m=String(n.getMinutes()).padStart(2,'0'),s=h+':'+m;['clock','home-time'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=s;});}
+tick();setInterval(tick,10000);
+</script>
+</body>
+</html>
